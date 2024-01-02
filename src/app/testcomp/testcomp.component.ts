@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NO_ERRORS_SCHEMA ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 @Component({
   selector: 'app-testcomp',
@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 
  //styles:['h1{background-color:pink}']      Inline CSS but not recomended 
 
- preserveWhitespaces:true
+ //preserveWhitespaces:true
 
 })
 export class TestcompComponent {
+
+  isvalid:boolean=true;
+  changevalue(valid:any){
+    this.isvalid=valid;
+  }
 
 }

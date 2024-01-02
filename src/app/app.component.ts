@@ -21,7 +21,7 @@ Show(name:String){
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  encapsulation:ViewEncapsulation.ShadowDom,  //can use None and default is Emulated
+  //encapsulation:ViewEncapsulation.ShadowDom,  //can use None and default is Emulated
   
   //in ShadowDom parent to child heirarchy is followed
   // and in None any CSS parent or Child can ber Applied to any One 
@@ -31,15 +31,21 @@ Show(name:String){
 export class AppComponent {
   title = 'firstapp';
 
-  @HostListener('click',['$event'])
-    Show(){
-      alert("hii alert...");
+  // @HostListener('click',['$event'])
+  //   Show(){
+  //     alert("hii alert...");
 
-  }
+  // }
 
   constructor(private obj:abc){
     obj.Show("Chetan");
   }
+
+
+
+ 
+
+
 
   
 

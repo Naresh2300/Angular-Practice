@@ -1,6 +1,53 @@
 <p style="text-align: center;">Welcome to Angular 16</p>
 
-<button> Click  here</button>
-<button>Space</button>
+<!-- <button> Click  here</button>
+<button>Space</button> -->
+
+<h2>Ng If example</h2>
+
+<input type="radio" name="radio1" (click)="changevalue(true)">True
+<input type="radio" name="radio1" (click)="changevalue(false)">False
+ <div *ngIf="isvalid  ; else elseblock ">
+   This is Valid Data
+</div>
+
+<!-- to use else block we will create template reference -->
+<ng-template #elseblock>
+    <div>
+      This is Else Block Invalid Data
+    </div>
+</ng-template>
+
+ <!-- then thenblock              can use then else block also in if directive
+<ng-template #thenblock>
+    <div>
+      This is Then  Block Invalid Data
+    </div>
+</ng-template> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="!isvalid">
+    The data is not Valid
+</div>  -->
+
+
+
 
 
