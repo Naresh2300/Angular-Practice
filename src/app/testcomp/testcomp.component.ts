@@ -12,10 +12,23 @@ import { Component, NO_ERRORS_SCHEMA ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/cor
 
 })
 export class TestcompComponent {
+  
+ Students:any[]=[
+  {
+    'name': 'Virat Kohli'
+  },
+  {
+    'name':'Rohit Sharma'
+  }
+
+ ];
+
+  name="Virat";
 
   isvalid:boolean=true;
   changevalue(valid:any){
     this.isvalid=valid;
   }
+
 
 }

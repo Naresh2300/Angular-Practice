@@ -26,6 +26,38 @@
 </ng-template> -->
 
 
+<h3>Switch Example</h3>
+
+
+Enter Your Name:<input type="text" #txtname (keyup)="0"/>
+
+ <div [ngSwitch]="txtname.value">                                     <!--For direct value can take ts file Name also && It is Case Sensitive Also-->
+  <div *ngSwitchCase="'Virat'">Hello Virat</div>
+    <div *ngSwitchCase="'Rohit'">Hello Rohit</div>
+      <div *ngSwitchCase="'MSD'">Hello MSD</div>
+        <div *ngSwitchCase="'Suresh'">Hello Suresh</div>
+        <div *ngSwitchDefault>No Case Matched</div>
+</div> 
+
+
+<h2>Using ngFor</h2>
+<ul>
+  <li *ngFor="let student of Students">
+    {{student.name}}
+    </li>
+</ul>
+
+<h3>Using ngFor with Index,first,last,odd,even</h3>
+<ul>
+  <li *ngFor="let student of Students ; let i=index ; let f=first ; let l=last ; let od=odd ; let ev=even">
+    {{student.name}} - {{i}} - {{f}} - {{l}} - {{od}} - {{ev}}
+    </li>
+</ul>
+
+
+
+
+
 
 
 
